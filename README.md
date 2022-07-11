@@ -32,6 +32,15 @@ Audio Identification.ipynb
 **Python Package**:
 ```python
 audioidentification/audioidentification.py
+
+import audioidentification as aid
+targetDir = 'database_recordings'
+queryDir = 'query_recordings'
+fingerprintDir = 'fingerprint'
+output_file = 'output.txt'
+
+aid.fingerprintBuilder(targetDir, fingerprintDir)
+aid.audioIdentification(queryDir, fingerprintDir, output_file)
 ```
 **Author**: Dekun Xie
 
